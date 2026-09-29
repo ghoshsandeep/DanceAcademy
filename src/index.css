@@ -4,15 +4,16 @@
 
 :root {
   /* ---- Design tokens (single source of truth for color) ---- */
-  --color-ivory: 251 246 238; /* warm ivory background */
-  --color-ivory-soft: 246 239 226; /* soft cream for cards */
-  --color-charcoal: 36 31 28; /* near-black text */
-  --color-charcoal-soft: 70 60 54; /* softer body text */
-  --color-terracotta: 180 85 47; /* primary accent */
-  --color-terracotta-dark: 143 66 36;
-  --color-terracotta-light: 217 130 85;
-  --color-gold: 184 147 90; /* secondary accent, used sparingly */
-  --color-gold-soft: 217 195 154;
+  /* Theme: Rose & Plum. The "terracotta" token names hold the plum primary; "gold" holds rose gold. */
+  --color-ivory: 255 245 245; /* blush background */
+  --color-ivory-soft: 251 232 232; /* deeper blush for cards */
+  --color-charcoal: 42 27 36; /* plum-tinted near-black text */
+  --color-charcoal-soft: 82 62 74; /* softer body text */
+  --color-terracotta: 142 44 90; /* primary: plum */
+  --color-terracotta-dark: 107 31 67;
+  --color-terracotta-light: 181 86 127;
+  --color-gold: 217 164 143; /* secondary accent: rose gold, used sparingly */
+  --color-gold-soft: 235 207 194;
 
   /* Mobile safe-area aware spacing helpers */
   --safe-top: env(safe-area-inset-top, 0px);

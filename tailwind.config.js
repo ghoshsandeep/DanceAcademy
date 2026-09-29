@@ -33,8 +33,8 @@ export default {
         content: '440px',
       },
       boxShadow: {
-        card: '0 4px 24px -8px rgba(36, 31, 28, 0.12)',
-        floating: '0 8px 30px -6px rgba(36, 31, 28, 0.22)',
+        card: '0 4px 24px -8px rgba(42, 27, 36, 0.12)',
+        floating: '0 8px 30px -6px rgba(42, 27, 36, 0.22)',
       },
     },
   },
