@@ -4,28 +4,30 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 export function Training() {
   return (
-    <section id="training" className="py-14">
-      <Container className="flex flex-col gap-8">
+    <section id="training" className="py-16 lg:py-20">
+      <Container className="flex flex-col gap-10">
         <SectionHeading
+          align="center"
           eyebrow="Our Approach"
           title="Training in Kathak"
           subtitle="Students are guided to understand the essence of Indian classical arts in its authentic form."
         />
 
-        <ul className="flex flex-col divide-y divide-charcoal/8 rounded-xl2 border border-charcoal/8 bg-ivory-soft shadow-card">
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {trainingPillars.map((item, index) => (
-            <li key={item.title} className="flex items-start gap-4 px-5 py-4">
-              <span className="font-serif text-lg font-medium text-terracotta/70">
+            <li key={item.title} className="card relative overflow-hidden p-6 pb-16">
+              <span
+                aria-hidden="true"
+                className="absolute bottom-1 right-4 font-serif text-[4.5rem] font-semibold leading-none text-gold/25"
+              >
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <span className="flex-1">
-                <span className="block font-serif text-lg font-semibold text-charcoal">
-                  {item.title}
-                </span>
-                <span className="mt-0.5 block text-sm leading-snug text-charcoal-soft">
-                  {item.description}
-                </span>
-              </span>
+              <h3 className="relative font-serif text-xl font-semibold text-charcoal">
+                {item.title}
+              </h3>
+              <p className="relative mt-2 text-sm leading-relaxed text-charcoal-soft">
+                {item.description}
+              </p>
             </li>
           ))}
         </ul>

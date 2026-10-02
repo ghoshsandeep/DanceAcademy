@@ -4,7 +4,7 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 export function Performances() {
   return (
-    <section id="performances" className="py-14">
+    <section id="performances" className="py-16 lg:py-20">
       <Container className="flex flex-col gap-10">
         <div className="flex flex-col gap-6">
           <SectionHeading
@@ -27,11 +27,11 @@ export function Performances() {
 
         <div className="flex flex-col gap-6">
           <SectionHeading eyebrow="Learning & Sharing" title="Workshops & Seminars" />
-          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {workshops.map((item) => (
               <li
                 key={item.title}
-                className="rounded-xl2 border border-charcoal/8 bg-ivory-soft p-5"
+                className="card p-6"
               >
                 <h3 className="font-serif text-base font-semibold text-charcoal">{item.title}</h3>
                 <p className="mt-1 text-sm leading-snug text-charcoal-soft">{item.host}</p>

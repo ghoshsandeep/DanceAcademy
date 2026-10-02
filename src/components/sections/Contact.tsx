@@ -69,7 +69,7 @@ export function Contact() {
     'w-full min-h-[48px] rounded-lg border border-charcoal/15 bg-ivory px-3.5 text-[0.95rem] text-charcoal placeholder:text-charcoal-soft/50 focus:border-terracotta'
 
   return (
-    <section id="contact" className="py-14">
+    <section id="contact" className="py-16 lg:py-20">
       <Container className="flex flex-col gap-10">
         <SectionHeading eyebrow="Enquire Now" title="Send an Enquiry" />
 

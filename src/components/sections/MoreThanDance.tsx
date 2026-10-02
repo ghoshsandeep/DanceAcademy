@@ -23,15 +23,15 @@ const benefits = [
 
 export function MoreThanDance() {
   return (
-    <section className="py-14">
+    <section className="py-16 lg:py-20">
       <Container className="flex flex-col gap-8">
-        <SectionHeading title="Why Learn Here" />
+        <SectionHeading align="center" eyebrow="Why Tatkar" title="Why Learn Here" />
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((benefit) => (
             <div
               key={benefit.title}
-              className="rounded-xl2 border border-charcoal/8 bg-ivory-soft p-5"
+              className="card p-6"
             >
               <h3 className="font-serif text-lg font-semibold text-charcoal">{benefit.title}</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-charcoal-soft">

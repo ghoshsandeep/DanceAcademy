@@ -11,15 +11,16 @@ const points = [
 
 export function Academy() {
   return (
-    <section id="academy" className="py-14">
+    <section id="academy" className="py-16 lg:py-20">
       <Container className="flex flex-col gap-8">
         <SectionHeading
+          align="center"
           eyebrow={siteInfo.tagline}
           title={`Welcome to ${siteInfo.academyName}`}
           subtitle="At Tatkar, tradition is not taught — it is lived."
         />
 
-        <ul className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
+        <ul className="mx-auto grid max-w-3xl grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
           {points.map((point) => (
             <li key={point} className="flex items-start gap-2.5 text-[0.95rem] text-charcoal-soft">
               <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" aria-hidden="true" />
@@ -28,7 +29,7 @@ export function Academy() {
           ))}
         </ul>
 
-        <p className="font-serif text-xl font-medium italic text-terracotta">
+        <p className="text-center font-serif text-2xl font-medium italic text-terracotta">
           Rooted in tradition. Guided by discipline.
         </p>
       </Container>

@@ -7,14 +7,14 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 export function About() {
   return (
-    <section id="about" className="py-14">
+    <section id="about" className="py-16 lg:py-20">
       <Container className="flex flex-col gap-8 lg:flex-row-reverse lg:items-center lg:gap-16">
         <div className="lg:w-1/2">
           <PlaceholderImage
             src={portraitImage.src}
             alt={portraitImage.alt}
             aspect="aspect-[4/5]"
-            className="w-full max-w-xs shadow-card lg:max-w-none"
+            className="w-full max-w-xs !rounded-t-[999px] shadow-floating lg:max-w-none"
           />
         </div>
 

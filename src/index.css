@@ -87,3 +87,37 @@ select:focus-visible {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* ---- Shared visual components ---- */
+@layer components {
+  /* Soft white card used across sections */
+  .card {
+    @apply rounded-[1.75rem] border border-terracotta/10 bg-white/80 shadow-card;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 34px -10px rgba(42, 27, 36, 0.22);
+  }
+
+  /* Fade-up reveal; the .is-visible class is added by the Reveal component */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Page background: white at the top easing into blush, like a soft studio light */
+body {
+  background-image: linear-gradient(to bottom, #ffffff 0, rgb(var(--color-ivory)) 640px);
+  background-repeat: no-repeat;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}

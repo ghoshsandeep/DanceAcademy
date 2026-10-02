@@ -12,6 +12,7 @@ import { Join } from './components/sections/Join'
 import { Performances } from './components/sections/Performances'
 import { Qualifications } from './components/sections/Qualifications'
 import { MoreThanDance } from './components/sections/MoreThanDance'
+import { Reveal } from './components/ui/Reveal'
 import { Training } from './components/sections/Training'
 import { Tradition } from './components/sections/Tradition'
 
@@ -21,18 +22,42 @@ function App() {
       <Header />
       <main className="pb-[calc(var(--bottom-nav-height)+var(--safe-bottom)+1.5rem)] lg:pb-0">
         <Hero />
-        <Credentials />
-        <About />
-        <Academy />
-        <Training />
-        <MoreThanDance />
-        <Tradition />
-        <Qualifications />
-        <Achievements />
-        <Performances />
-        <Gallery />
-        <Join />
-        <Contact />
+        <Reveal>
+          <Credentials />
+        </Reveal>
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Academy />
+        </Reveal>
+        <Reveal>
+          <Training />
+        </Reveal>
+        <Reveal>
+          <MoreThanDance />
+        </Reveal>
+        <Reveal>
+          <Tradition />
+        </Reveal>
+        <Reveal>
+          <Qualifications />
+        </Reveal>
+        <Reveal>
+          <Achievements />
+        </Reveal>
+        <Reveal>
+          <Performances />
+        </Reveal>
+        <Reveal>
+          <Gallery />
+        </Reveal>
+        <Reveal>
+          <Join />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
       <MobileBottomNav />

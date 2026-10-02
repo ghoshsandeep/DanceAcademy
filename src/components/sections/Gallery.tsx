@@ -7,7 +7,7 @@ export function Gallery() {
   const [featured, ...rest] = galleryItems
 
   return (
-    <section id="gallery" className="py-14">
+    <section id="gallery" className="py-16 lg:py-20">
       <div className="flex flex-col gap-8">
         <Container>
           <SectionHeading eyebrow="In Motion" title="Performance & Academy Life" />

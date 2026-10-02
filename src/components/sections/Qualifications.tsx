@@ -5,7 +5,7 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 function QualificationList({ title, items }: { title: string; items: Qualification[] }) {
   return (
-    <div className="rounded-xl2 border border-charcoal/8 bg-ivory-soft p-5">
+    <div className="card p-6">
       <h3 className="font-serif text-lg font-semibold text-charcoal">{title}</h3>
       <ul className="mt-3 flex flex-col gap-3">
         {items.map((item) => (
@@ -22,14 +22,14 @@ function QualificationList({ title, items }: { title: string; items: Qualificati
 
 export function Qualifications() {
   return (
-    <section id="qualifications" className="py-14">
+    <section id="qualifications" className="py-16 lg:py-20">
       <Container className="flex flex-col gap-8">
-        <SectionHeading eyebrow="Scholar & Educator" title="Education & Teaching" />
+        <SectionHeading align="center" eyebrow="Scholar & Educator" title="Education & Teaching" />
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           <QualificationList title="Academic Qualifications" items={education} />
           <QualificationList title="Certifications & Diplomas" items={certifications} />
-          <div className="rounded-xl2 border border-charcoal/8 bg-ivory-soft p-5">
+          <div className="card p-6">
             <h3 className="font-serif text-lg font-semibold text-charcoal">Teaching Roles</h3>
             <ul className="mt-3 flex flex-col gap-3">
               {teachingRoles.map((role) => (

@@ -4,10 +4,10 @@ import { Container } from '../ui/Container'
 
 export function Join() {
   return (
-    <section className="py-14">
+    <section className="py-16 lg:py-20">
       <Container>
-        <div className="flex flex-col gap-5 rounded-xl2 bg-terracotta px-6 py-10 text-center text-ivory shadow-floating">
-          <h2 className="font-serif text-2xl font-semibold leading-snug lg:text-3xl">
+        <div className="flex flex-col gap-5 relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-terracotta to-terracotta-dark px-6 py-12 text-center text-ivory shadow-floating lg:rounded-[3rem] lg:py-16">
+          <h2 className="font-serif text-3xl font-semibold leading-snug lg:text-5xl">
             Begin Your Kathak Journey
           </h2>
           <p className="mx-auto max-w-[42ch] text-[0.95rem] leading-relaxed text-ivory/90">
@@ -15,14 +15,10 @@ export function Join() {
             {siteInfo.academyName}.
           </p>
           <div className="mx-auto flex flex-col gap-3 sm:flex-row">
-            <Button href="#contact" className="bg-ivory text-terracotta hover:bg-ivory/90">
+            <Button href="#contact" variant="light" arrow>
               Enquire Now
             </Button>
-            <Button
-              href="#contact"
-              variant="secondary"
-              className="border-ivory/40 text-ivory hover:border-ivory/70"
-            >
+            <Button href="#contact" variant="outline-light">
               Ask a Question
             </Button>
           </div>

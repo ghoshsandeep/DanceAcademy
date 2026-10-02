@@ -8,7 +8,7 @@ const footerLinks = navItems.filter((item) =>
 
 export function Footer() {
   return (
-    <footer className="bg-charcoal text-ivory/85">
+    <footer className="mt-8 rounded-t-[2rem] bg-charcoal text-ivory/85 lg:rounded-t-[3.5rem]">
       <Container className="flex flex-col gap-10 py-14">
         <div>
           <p className="font-serif text-2xl font-semibold text-ivory">{siteInfo.academyName}</p>

@@ -26,8 +26,9 @@ export function Header() {
   }, [menuOpen])
 
   return (
-    <header className="sticky top-0 z-40 border-b border-charcoal/8 bg-ivory/90 backdrop-blur-sm">
-      <Container className="flex h-16 items-center justify-between">
+    <header className="fixed inset-x-0 top-3 z-40">
+      <Container>
+        <div className="flex h-14 items-center justify-between rounded-full border border-white/60 bg-ivory/85 pl-5 pr-1.5 shadow-floating backdrop-blur-md lg:h-16 lg:pl-7">
         <a href="#home" aria-label={siteInfo.academyName} className="flex flex-col leading-none text-charcoal">
           <span className="font-serif text-xl font-semibold uppercase tracking-[0.3em]">
             {siteInfo.academyShortName}
@@ -52,7 +53,7 @@ export function Header() {
               ))}
             </ul>
           </nav>
-          <Button href="#contact" variant="primary" className="!min-h-[44px]">
+          <Button href="#contact" variant="primary" arrow className="!min-h-[44px]">
             Enquire
           </Button>
         </div>
@@ -80,13 +81,14 @@ export function Header() {
             </svg>
           )}
         </button>
+        </div>
       </Container>
 
       {menuOpen &&
         createPortal(
           <div
             id="mobile-menu"
-            className="fixed inset-x-0 top-16 bottom-0 z-50 overflow-y-auto bg-ivory lg:hidden"
+            className="fixed inset-x-0 top-[4.75rem] bottom-0 z-50 overflow-y-auto bg-ivory lg:hidden"
           >
             <nav aria-label="Mobile" className="flex h-full flex-col px-5 pt-6">
               <ul className="flex flex-col gap-1">

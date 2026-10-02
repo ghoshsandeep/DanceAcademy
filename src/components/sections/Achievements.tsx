@@ -28,13 +28,16 @@ function Timeline({ items }: { items: Achievement[] }) {
 
 export function Achievements() {
   return (
-    <section id="achievements" className="py-14">
-      <Container className="flex flex-col gap-10">
-        <SectionHeading eyebrow="Awards & Recognition" title="Major Honours" />
-        <Timeline items={majorHonours} />
-
-        <SectionHeading eyebrow="Award-Winning Performer" title="Competition Results" />
-        <Timeline items={competitionResults} />
+    <section id="achievements" className="py-16 lg:py-20">
+      <Container className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="flex flex-col gap-10">
+          <SectionHeading eyebrow="Awards & Recognition" title="Major Honours" />
+          <Timeline items={majorHonours} />
+        </div>
+        <div className="flex flex-col gap-10">
+          <SectionHeading eyebrow="Award-Winning Performer" title="Competition Results" />
+          <Timeline items={competitionResults} />
+        </div>
       </Container>
     </section>
   )
