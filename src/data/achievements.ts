@@ -1,15 +1,28 @@
 export type Achievement = {
   title: string
   description?: string
+  year?: string
 }
 
-// Only facts explicitly confirmed by the client. No years are included
-// because exact dates were not provided — do not invent them.
-export const achievements: Achievement[] = [
+// Source: founder's profile PDF. Years are shown only where the PDF gives one.
+export const majorHonours: Achievement[] = [
   {
-    title: 'BHU Gold Medalist',
-    description: 'Awarded Gold Medal from Banaras Hindu University.',
+    title: 'Gold Medal',
+    description: 'Gold Medalist, Banaras Hindu University.',
+    year: '2007',
   },
+  {
+    title: '“Srinagar Mani” Title',
+    description: 'Conferred by Sur Samsad, Mumbai.',
+    year: '2008',
+  },
+  {
+    title: 'National Scholarship',
+    description: 'Awarded by the Ministry of Culture, Govt. of India.',
+    year: '2008',
+  },
+  // The three items below are confirmed by the client but are not in the profile PDF.
+  // No years are given for them — do not invent any.
   {
     title: "Medal Received from the Hon'ble President of India",
     description: 'Presented by the President of India at the time of the award.',
@@ -19,22 +32,38 @@ export const achievements: Achievement[] = [
     description: 'Recognised three times with the UP Visharad qualification.',
   },
   {
-    title: 'Banaras Gharana',
-    description: 'Trained in and carries forward the Banaras Gharana tradition of Kathak.',
-  },
-  {
     title: 'Annual Performance at Pune Dance Academy',
     description: 'Invited to perform annually at Pune Dance Academy.',
   },
+]
+
+export const competitionResults: Achievement[] = [
+  { title: '1st Place, Classical Dance', description: 'All India Radio, Gorakhpur' },
   {
-    title: '20+ Years in Dance & Teaching',
-    description: 'Over two decades of experience as a Kathak artist and educator.',
+    title: 'Winner, Sambhagiya Sangeet Pratiyogita',
+    description: 'Uttar Pradesh Sangeet Natya Academy',
+  },
+  {
+    title: 'Winner, Ghoomar',
+    description: '7th International Youth Festival, University of Rajasthan',
+  },
+  {
+    title: 'Runner-up, Pradedhik Sangeet Pratiyogita',
+    description: 'Uttar Pradesh Sangeet Natya Academy',
+  },
+  {
+    title: 'Runner-up, Classical Dance',
+    description: 'Association of Indian Universities (Shillong)',
+  },
+  {
+    title: '2nd Runner-up, Classical Dance',
+    description: 'Annual National Youth Festival (Chennai)',
   },
 ]
 
 export const credentials = [
-  { value: '20+', label: 'Years of Experience' },
-  { value: 'BHU', label: 'Gold Medalist' },
-  { value: '3×', label: 'UP Visharad' },
-  { value: 'Banaras', label: 'Gharana Tradition' },
+  { value: '25+', label: 'Years of Training & Performance' },
+  { value: '300+', label: 'Students Trained' },
+  { value: 'Ph.D.', label: 'Performing Arts (Kathak), 2022' },
+  { value: 'Gold Medal', label: 'Banaras Hindu University, 2007' },
 ]

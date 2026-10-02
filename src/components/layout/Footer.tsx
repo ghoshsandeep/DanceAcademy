@@ -3,7 +3,7 @@ import { languageOptions, siteInfo } from '../../data/site'
 import { Container } from '../ui/Container'
 
 const footerLinks = navItems.filter((item) =>
-  ['About Suji', 'Classes', 'Gallery', 'Contact'].includes(item.label),
+  ['About', 'Training', 'Lineage', 'Gallery'].includes(item.label),
 )
 
 export function Footer() {
@@ -20,7 +20,7 @@ export function Footer() {
             {footerLinks.map((item) => (
               <li key={item.href}>
                 <a href={item.href} className="text-ivory/80 hover:text-gold-soft">
-                  {item.label.replace(' Suji', '')}
+                  {item.label}
                 </a>
               </li>
             ))}

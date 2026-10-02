@@ -1,3 +1,4 @@
+import { gurus } from '../../data/profile'
 import { siteInfo } from '../../data/site'
 import { Container } from '../ui/Container'
 import { SectionHeading } from '../ui/SectionHeading'
@@ -21,7 +22,7 @@ function RhythmBars() {
 
 export function Tradition() {
   return (
-    <section className="bg-charcoal py-16 text-ivory">
+    <section id="lineage" className="bg-charcoal py-16 text-ivory">
       <Container className="flex flex-col gap-6">
         <RhythmBars />
         <SectionHeading
@@ -31,10 +32,17 @@ export function Tradition() {
           subtitle={undefined}
         />
         <p className="max-w-[48ch] text-[0.98rem] leading-relaxed text-ivory/75">
-          Next Gen Dance Academy carries forward the {siteInfo.gharana} tradition of Kathak —
-          honouring its footwork, rhythm and storytelling while nurturing the next generation of
-          dancers in {siteInfo.city}.
+          {siteInfo.founderName} is trained in both the Jaipur and Lucknow gharanas of Kathak. Her
+          artistic upbringing is shaped by guidance from eminent gurus:
         </p>
+        <ul className="flex flex-col gap-4">
+          {gurus.map((guru) => (
+            <li key={guru.name} className="border-l border-gold-soft/50 pl-4">
+              <p className="font-serif text-lg font-semibold text-ivory">{guru.name}</p>
+              {guru.role && <p className="text-sm text-ivory/70">{guru.role}</p>}
+            </li>
+          ))}
+        </ul>
       </Container>
     </section>
   )

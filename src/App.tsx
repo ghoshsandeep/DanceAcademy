@@ -4,14 +4,15 @@ import { MobileBottomNav } from './components/layout/MobileBottomNav'
 import { About } from './components/sections/About'
 import { Academy } from './components/sections/Academy'
 import { Achievements } from './components/sections/Achievements'
-import { Classes } from './components/sections/Classes'
 import { Contact } from './components/sections/Contact'
 import { Credentials } from './components/sections/Credentials'
 import { Gallery } from './components/sections/Gallery'
 import { Hero } from './components/sections/Hero'
 import { Join } from './components/sections/Join'
+import { Performances } from './components/sections/Performances'
+import { Qualifications } from './components/sections/Qualifications'
 import { MoreThanDance } from './components/sections/MoreThanDance'
-import { Testimonials } from './components/sections/Testimonials'
+import { Training } from './components/sections/Training'
 import { Tradition } from './components/sections/Tradition'
 
 function App() {
@@ -23,12 +24,13 @@ function App() {
         <Credentials />
         <About />
         <Academy />
-        <Classes />
+        <Training />
         <MoreThanDance />
         <Tradition />
+        <Qualifications />
         <Achievements />
+        <Performances />
         <Gallery />
-        <Testimonials />
         <Join />
         <Contact />
       </main>

@@ -28,8 +28,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-charcoal/8 bg-ivory/90 backdrop-blur-sm">
       <Container className="flex h-16 items-center justify-between">
-        <a href="#home" className="font-serif text-lg font-semibold tracking-wide text-charcoal">
-          {siteInfo.academyName}
+        <a href="#home" aria-label={siteInfo.academyName} className="flex flex-col leading-none text-charcoal">
+          <span className="font-serif text-xl font-semibold uppercase tracking-[0.3em]">
+            {siteInfo.academyShortName}
+          </span>
+          <span className="mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-charcoal-soft">
+            {siteInfo.academyDescriptor}
+          </span>
         </a>
 
         <div className="hidden items-center gap-8 lg:flex">
@@ -48,7 +53,7 @@ export function Header() {
             </ul>
           </nav>
           <Button href="#contact" variant="primary" className="!min-h-[44px]">
-            Join a Class
+            Enquire
           </Button>
         </div>
 
@@ -98,7 +103,7 @@ export function Header() {
                 ))}
               </ul>
               <Button href="#contact" onClick={() => setMenuOpen(false)} className="mt-8 w-full">
-                Join a Class
+                Enquire
               </Button>
             </nav>
           </div>,

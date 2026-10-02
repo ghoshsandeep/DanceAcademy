@@ -4,14 +4,14 @@ export type NavItem = {
 }
 
 // Shared by the desktop/mobile header menu and the footer link list.
+// Home is reached via the logo and enquiries via the header button.
 export const navItems: NavItem[] = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Suji', href: '#about' },
-  { label: 'Academy', href: '#academy' },
-  { label: 'Classes', href: '#classes' },
-  { label: 'Achievements', href: '#achievements' },
+  { label: 'About', href: '#about' },
+  { label: 'Training', href: '#training' },
+  { label: 'Lineage', href: '#lineage' },
+  { label: 'Awards', href: '#achievements' },
+  { label: 'Performances', href: '#performances' },
   { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact', href: '#contact' },
 ]
 
 export type BottomNavItem = {
@@ -23,7 +23,7 @@ export type BottomNavItem = {
 // A tighter subset for the fixed mobile bottom navigation bar.
 export const bottomNavItems: BottomNavItem[] = [
   { label: 'Home', href: '#home', icon: 'home' },
-  { label: 'Classes', href: '#classes', icon: 'classes' },
+  { label: 'Training', href: '#training', icon: 'classes' },
   { label: 'Gallery', href: '#gallery', icon: 'gallery' },
   { label: 'Enquire', href: '#contact', icon: 'contact' },
 ]

@@ -15,21 +15,21 @@ export function Hero() {
           <h1 className="font-serif text-[2.25rem] font-semibold leading-[1.15] text-charcoal lg:text-6xl">
             The Art of Kathak.
             <br />
-            The Tradition of Banaras.
+            Rooted in Tradition.
             <br />
-            The Next Generation.
+            Guided by Discipline.
           </h1>
           <p className="max-w-[42ch] text-[0.98rem] leading-relaxed text-charcoal-soft">
-            Founded by Kathak artist and teacher {siteInfo.founderName}, bringing over{' '}
-            {siteInfo.yearsExperience} years of experience, tradition and artistry to students in{' '}
-            {siteInfo.city} and beyond.
+            Founded by Kathak educator and scholar {siteInfo.founderName}, with over{' '}
+            {siteInfo.yearsExperience} years of training and performance experience, trained in the{' '}
+            {siteInfo.gharana}. Based in {siteInfo.city}.
           </p>
           <div className="mt-2 flex flex-col gap-3 sm:flex-row">
             <Button href="#contact" variant="primary">
-              Join a Class
+              Enquire
             </Button>
             <Button href="#about" variant="secondary">
-              Discover Suji
+              Meet Dr. Ghosh
             </Button>
           </div>
         </div>

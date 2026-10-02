@@ -3,21 +3,21 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 const benefits = [
   {
-    title: '20+ Years of Experience',
-    description: 'Learn from an experienced Kathak practitioner and educator.',
+    title: '25+ Years of Experience',
+    description: 'Over 25 years of training and performance experience in Kathak.',
   },
   {
     title: 'Traditional Foundation',
-    description: 'Rooted in the Banaras Gharana tradition.',
+    description: 'Trained in both the Jaipur and Lucknow gharanas.',
   },
   {
-    title: 'Personal Guidance',
-    description: "Teaching adapted to each student's stage and learning journey.",
+    title: 'Student-Centred Approach',
+    description: 'Structured pedagogy with a strong emphasis on technique, rhythm and abhinaya.',
   },
   {
-    title: 'From Learning to Performance',
+    title: 'Examination Success',
     description:
-      'Students can develop their skills beyond the classroom and explore performance and choreography.',
+      '100+ students trained and mentored for graded examinations, certification courses and university-level exams.',
   },
 ]
 
@@ -25,7 +25,7 @@ export function MoreThanDance() {
   return (
     <section className="py-14">
       <Container className="flex flex-col gap-8">
-        <SectionHeading title="More Than Dance" />
+        <SectionHeading title="Why Learn Here" />
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {benefits.map((benefit) => (

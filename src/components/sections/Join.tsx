@@ -11,12 +11,12 @@ export function Join() {
             Begin Your Kathak Journey
           </h2>
           <p className="mx-auto max-w-[42ch] text-[0.95rem] leading-relaxed text-ivory/90">
-            Whether you're introducing your child to Kathak, beginning as a beginner, or looking
-            to deepen your practice, discover a learning path with {siteInfo.academyName}.
+            Discover structured, disciplined Kathak training rooted in tradition with{' '}
+            {siteInfo.academyName}.
           </p>
           <div className="mx-auto flex flex-col gap-3 sm:flex-row">
             <Button href="#contact" className="bg-ivory text-terracotta hover:bg-ivory/90">
-              Join a Class
+              Enquire Now
             </Button>
             <Button
               href="#contact"

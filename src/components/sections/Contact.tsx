@@ -1,11 +1,10 @@
 import { type FormEvent, useState } from 'react'
-import { experienceLevels, interestOptions, preferredModes } from '../../data/form'
-import { contactInfo } from '../../data/site'
+import { experienceLevels, interestOptions } from '../../data/form'
 import { Button } from '../ui/Button'
 import { Container } from '../ui/Container'
 import { SectionHeading } from '../ui/SectionHeading'
 
-type FormErrors = Partial<Record<'name' | 'experience' | 'interests' | 'mode', string>>
+type FormErrors = Partial<Record<'name' | 'experience' | 'interests', string>>
 
 export function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
@@ -24,13 +23,11 @@ export function Contact() {
     const formData = new FormData(form)
     const name = String(formData.get('name') ?? '').trim()
     const experience = String(formData.get('experience') ?? '')
-    const mode = String(formData.get('mode') ?? '')
 
     const nextErrors: FormErrors = {}
     if (!name) nextErrors.name = 'Please enter your name.'
     if (!experience) nextErrors.experience = 'Please select an experience level.'
     if (interests.length === 0) nextErrors.interests = 'Please select at least one option.'
-    if (!mode) nextErrors.mode = 'Please select a preferred mode.'
 
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length > 0) return
@@ -49,12 +46,11 @@ export function Contact() {
         body: JSON.stringify({
           access_key: accessKey,
           subject: `New enquiry from ${name}`,
-          from_name: 'Sujaya Dance Academy Website',
+          from_name: 'Tatkar School of Performing Arts Website',
           name,
           age: String(formData.get('age') ?? ''),
           experience,
           interests: interests.join(', '),
-          mode,
           message: String(formData.get('message') ?? ''),
           botcheck: '',
         }),
@@ -172,22 +168,6 @@ export function Contact() {
               {errors.interests && <p className="text-xs text-terracotta-dark">{errors.interests}</p>}
             </fieldset>
 
-            <fieldset className="flex flex-col gap-2">
-              <legend className="text-sm font-medium text-charcoal">Preferred Mode</legend>
-              <div className="flex flex-wrap gap-2">
-                {preferredModes.map((mode) => (
-                  <label
-                    key={mode}
-                    className="flex min-h-[44px] cursor-pointer items-center gap-2 rounded-full border border-charcoal/15 px-4 text-sm has-[:checked]:border-terracotta has-[:checked]:bg-terracotta/10"
-                  >
-                    <input type="radio" name="mode" value={mode} className="accent-terracotta" />
-                    {mode}
-                  </label>
-                ))}
-              </div>
-              {errors.mode && <p className="text-xs text-terracotta-dark">{errors.mode}</p>}
-            </fieldset>
-
             <div className="flex flex-col gap-1.5">
               <label htmlFor="message" className="text-sm font-medium text-charcoal">
                 Message
@@ -202,8 +182,7 @@ export function Contact() {
 
             {status === 'error' && (
               <p role="alert" className="text-sm text-terracotta-dark">
-                Sorry, we couldn't send your enquiry. Please try again or contact us directly using
-                the details below.
+                Sorry, we couldn't send your enquiry. Please try again later.
               </p>
             )}
 
@@ -218,39 +197,6 @@ export function Contact() {
             </Button>
           </form>
         )}
-
-        <div className="rounded-xl2 border border-charcoal/8 bg-ivory-soft p-5">
-          <h3 className="font-serif text-lg font-semibold text-charcoal">Contact Details</h3>
-          <dl className="mt-3 flex flex-col gap-2 text-sm text-charcoal-soft">
-            <div className="flex gap-2">
-              <dt className="font-medium text-charcoal">Phone:</dt>
-              <dd>{contactInfo.phone}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt className="font-medium text-charcoal">WhatsApp:</dt>
-              <dd>{contactInfo.whatsapp}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt className="font-medium text-charcoal">Email:</dt>
-              <dd>{contactInfo.email}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt className="font-medium text-charcoal">Instagram:</dt>
-              <dd>{contactInfo.instagram}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt className="font-medium text-charcoal">YouTube:</dt>
-              <dd>{contactInfo.youtube}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt className="font-medium text-charcoal">Address:</dt>
-              <dd>{contactInfo.address}</dd>
-            </div>
-          </dl>
-          <p className="mt-3 text-xs text-charcoal-soft/60">
-            Contact details are placeholders and will be updated once confirmed.
-          </p>
-        </div>
       </Container>
     </section>
   )
